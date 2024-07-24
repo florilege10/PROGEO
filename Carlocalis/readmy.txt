@@ -1,0 +1,93 @@
+# Vehicle Geolocation Application
+
+## Description
+This application is designed to manage vehicle geolocation, driver information, client orders, and driving events.
+
+## Installation
+
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/yourusername/vehicle-geolocation.git
+    cd vehicle-geolocation
+    ```
+
+2. Install the required dependencies:
+    ```sh
+    pip install -r requirements.txt
+    ```
+
+3. Apply migrations:
+    ```sh
+    python manage.py migrate
+    ```
+
+4. Create a superuser:
+    ```sh
+    python manage.py createsuperuser
+    ```
+
+5. Run the development server:
+    ```sh
+    python manage.py runserver
+    ```
+
+## API Endpoints
+
+### Chauffeurs
+- List Chauffeurs: `GET /chauffeurs/`
+- Create Chauffeur: `POST /chauffeur/`
+
+### Clients
+- List Clients: `GET /clients/`
+- Create Client: `POST /client/`
+
+### Commandes
+- List Commandes: `GET /commandes/`
+- Create Commande: `POST /commande/`
+
+### Voitures
+- List Voitures: `GET /voitures/`
+- Create Voiture: `POST /voiture/`
+
+### Conduires
+- List Conduires: `GET /conduires/`
+- Create Conduire: `POST /conduire/`
+
+## Models
+
+- **Admin**: Manages administrators.
+- **Chauffeur**: Manages drivers.
+- **Client**: Manages clients.
+- **Commander**: Manages vehicle orders.
+- **Voiture**: Manages vehicles and their geolocation.
+- **Location**: Manages geolocation data of vehicles.
+- **Conduire**: Manages driving events.
+
+## Serializers
+
+- **ChauffeurListSerializer**: Serializer for listing chauffeurs.
+- **ChauffeurDetailSerializer**: Serializer for detailed view of a chauffeur.
+- **ClientListSerializer**: Serializer for listing clients.
+- **ClientDetailSerializer**: Serializer for detailed view of a client.
+- **CommandeListSerializer**: Serializer for listing commandes.
+- **CommandeDetailSerializer**: Serializer for detailed view of a commande.
+- **VoitureListSerializer**: Serializer for listing voitures.
+- **VoitureDetailSerializer**: Serializer for detailed view of a voiture.
+- **ConduireListSerializer**: Serializer for listing conduires.
+- **ConduireDetailSerializer**: Serializer for detailed view of a conduire.
+
+## Views
+
+- **ChauffeurListViewSet**: ViewSet for listing chauffeurs (GET).
+- **ChauffeurDetailViewSet**: ViewSet for detailed view of a chauffeur (POST).
+- **ClientListViewSet**: ViewSet for listing clients (GET).
+- **ClientDetailViewSet**: ViewSet for detailed view of a client (POST).
+- **CommandeListViewSet**: ViewSet for listing commandes (GET).
+- **CommandeDetailViewSet**: ViewSet for detailed view of a commande (POST).
+- **VoitureListViewSet**: ViewSet for listing voitures (GET).
+- **VoitureDetailViewSet**: ViewSet for detailed view of a voiture (POST).
+- **ConduireListViewSet**: ViewSet for listing conduires (GET).
+- **ConduireDetailViewSet**: ViewSet for detailed view of a conduire (POST).
+
+## License
+This project is licensed under the MIT License - see the LICENSE file for details.
